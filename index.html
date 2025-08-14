@@ -136,6 +136,63 @@
                     </div>
                 </div>
             </section>
+
+            <section id="code-architecture" class="bg-white rounded-lg shadow-lg p-6 md:p-10">
+                <h2 class="text-3xl font-bold text-center text-[#006494] mb-8">System Architecture: Python Backend Flow</h2>
+                <p class="text-center max-w-3xl mx-auto mb-12">This diagram illustrates the backend process, from initial data collection to generating a fully tailored CV and cover letter. The Python backend dynamically adapts content based on job descriptions and user data.</p>
+                
+                <div class="flex flex-col items-center">
+                    <!-- Stage 1: Initial Data Collection -->
+                    <div class="flowchart-node bg-[#00A6FB] text-white">
+                        <h4 class="font-semibold">User Data Collection</h4>
+                        <p class="text-sm mt-2">Chatbot conversation collects raw experience, skills, and projects.</p>
+                    </div>
+                    <div class="flowchart-arrow">&#11015;</div>
+                    
+                    <!-- Stage 2: Base CV Generation -->
+                    <div class="flowchart-node">
+                        <h4 class="font-semibold text-[#006494]">LLM-Powered Content Generation</h4>
+                        <p class="text-sm mt-2">LLM API call transforms raw data into a polished, base CV draft.</p>
+                    </div>
+                    <div class="flowchart-arrow">&#11015;</div>
+
+                    <!-- Stage 3: The Tailoring Fork -->
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 mt-4">
+                        <div class="flowchart-node">
+                            <h4 class="font-semibold text-[#0582CA]">Option 1: User Provides Job Description</h4>
+                            <p class="text-sm mt-2">JD uploaded for analysis.</p>
+                        </div>
+                        <div class="flowchart-node">
+                            <h4 class="font-semibold text-[#0582CA]">Option 2: No JD Provided</h4>
+                            <p class="text-sm mt-2">Uses base CV draft as final output.</p>
+                        </div>
+                    </div>
+                    <div class="flowchart-arrow mt-4">&#11015;</div>
+                    
+                    <!-- Stage 4: Final Output Generation -->
+                    <div class="flowchart-node">
+                        <h4 class="font-semibold text-[#006494]">Relevance & Keyword Analysis</h4>
+                        <p class="text-sm mt-2">Compares base CV against JD to select and prioritize most relevant content.</p>
+                    </div>
+                    <div class="flowchart-arrow">&#11015;</div>
+
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 mt-4">
+                        <div class="flowchart-node bg-[#00A6FB] text-white">
+                            <h4 class="font-semibold">Generate Tailored CV & PDF</h4>
+                        </div>
+                        <div class="flowchart-node bg-[#00A6FB] text-white">
+                            <h4 class="font-semibold">Generate Tailored Cover Letter</h4>
+                        </div>
+                    </div>
+
+                    <div class="flowchart-arrow mt-4">&#11015;</div>
+
+                    <div class="flowchart-node bg-[#006494] text-white">
+                        <h4 class="font-semibold">Final Output Delivered</h4>
+                        <p class="text-sm mt-2">User receives both tailored CV (PDF) and cover letter.</p>
+                    </div>
+                </div>
+            </section>
             
             <section id="user-journey" class="bg-white rounded-lg shadow-lg p-6 md:p-10">
                 <h2 class="text-3xl font-bold text-center text-[#006494] mb-12">The User Journey</h2>
